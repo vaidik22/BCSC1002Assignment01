@@ -48,20 +48,20 @@ public class Library {
      * This method will set the Information of books available in Library.
      */
     public void setBooksInLibrary() {
-        available[0].setBookName("The Guide");
-        available[0].setBookAuthorName("RK Narayan");
+        available[0].setBookName("Beyond Religion: Ethics for a Whole World");
+        available[0].setBookAuthorName("Dalai Lama");
         available[0].setIsbnNumber("9352836537000");
-        available[1].setBookName("Cry, The Peacock");
-        available[1].setBookAuthorName("Nirad C");
+        available[1].setBookName("I Witness: Partial Observations");
+        available[1].setBookAuthorName("Kapil Sibal");
         available[1].setIsbnNumber("9353062012000");
-        available[2].setBookName("Train to Pakistan");
-        available[2].setBookAuthorName("Kiran Desai");
+        available[2].setBookName("The Art of Living - A Guide to Contentment, Joy and Fulfilment");
+        available[2].setBookAuthorName("Dalai Lama");
         available[2].setIsbnNumber("9789332582705");
-        available[3].setBookName("Fundamental of Software Engineering");
-        available[3].setBookAuthorName("Rajib Mall");
+        available[3].setBookName("Dare to Do: For the New Generation");
+        available[3].setBookAuthorName("Kiran bedi");
         available[3].setIsbnNumber("9789388028028");
-        available[4].setBookName("Serpent and the Rope");
-        available[4].setBookAuthorName("Raja Rao");
+        available[4].setBookName("The Hanging of afzal Guru");
+        available[4].setBookAuthorName("Arundhati Roy");
         available[4].setIsbnNumber("9351199258111");
     }
 
