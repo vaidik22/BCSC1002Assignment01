@@ -13,78 +13,59 @@ public class Book {
     private String bookAuthor;
     private String bookISBN;
 
-    public Book(String bookName, String bookAuthor, String bookISBN) {
-        this.bookName = bookName;
-        this.bookAuthor = bookAuthor;
-        this.bookISBN = bookISBN;
-    }
-
     public Book() {
-        this.getBookName();
-        this.getbookISBN();
-        this.getbookAuthor();
+        this.bookName = null;
+        this.bookAuthor = null;
+        this.bookISBN = null;
     }
 
-    public void setBookAuthor(String bookAuthor) {
-        this.bookAuthor = bookAuthor;
+    public Book(String bookName, String bookAuthorName, String isbnNumber) {
+        this.bookName = bookName;
+        this.bookAuthor = bookAuthorName;
+        this.bookISBN = isbnNumber;
     }
 
-    public void setBookISBN(String bookISBN) {
-        this.bookISBN = bookISBN;
+    public String getBookName() {
+        return bookName;
     }
 
     public void setBookName(String bookName) {
         this.bookName = bookName;
     }
 
-    private String getbookISBN() {
-        return bookISBN;
-    }
-
-
-    private String getbookAuthor() {
+    public String getBookAuthor() {
         return bookAuthor;
     }
 
-
-    private String getBookName() {
-        return bookName;
+    public void setBookAuthorName(String bookAuthor) {
+        this.bookAuthor = bookAuthor;
     }
-    // The toString() method
-    // used to convert the object's attributes to a String.
+
+    public String getBookISBN() {
+        return bookISBN;
+    }
+
+    public void setIsbnNumber(String bookISBN) {
+        this.bookISBN = bookISBN;
+    }
+
     public String toString() {
-        return "Book Name: " + getBookName() + ", " +
-                "Book Author Name :" + getbookAuthor() + ", " +
-                "Book ISBN : " + getbookISBN() + ".";
-
+        return "Book Name" + getBookName() + "," +
+                "Authors Name" + getBookAuthor() + "," +
+                "isbnNumber" + getBookISBN() + ".";
     }
-    // The equals() method and the hashCode() method.
-    // equals : compares two objects of the same class and tell whether they are equal
-
     @Override
-    public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        if (obj == null || getClass() != obj.getClass()) {
-            return false;
-        }
-        Book book = (Book) obj;
-        return getbookISBN() == book.getbookISBN() &&
-                getbookAuthor() == book.getbookAuthor() &&
-                Objects.equals(getBookName(), book.getBookName());
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Book book = (Book) o;
+        return Objects.equals(bookName, book.bookName) &&
+                Objects.equals(bookAuthor, book.bookAuthor) &&
+                Objects.equals(bookISBN, book.bookISBN);
     }
-    // It creates the hashcode of an object for us.
+
     @Override
     public int hashCode() {
-        return Objects.hash(getbookAuthor(),getbookISBN(),getBookName());
-    }
-
-    public void setBookAuthor() {
-        getbookAuthor();
-    }
-
-    public void setBookISBN() {
-        getbookISBN();
+        return Objects.hash(bookName, bookAuthor, bookISBN);
     }
 }
